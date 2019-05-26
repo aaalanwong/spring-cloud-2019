@@ -1,0 +1,14 @@
+server:
+  port: 7002
+
+eureka:
+  instance:
+    hostname: aaalanwong-7002.com
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://aaalanwong-7001.com:7001/eureka, http://aaalanwong-7003.com:7003/eureka
+spring:
+  application:
+    name: eureka-server

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.provider.dao.DepartmentDao">
+    <select id="getById" resultType="com.atguigu.common.entity.Department" parameterType="Integer">
+        select id, department_name, db_name from department where id = #{id}
+    </select>
+
+    <insert id="save" parameterType="com.atguigu.common.entity.Department">
+        insert into department(department_name, db_name)
+        values(#{departmentName}, DATABASE())
+    </insert>
+
+    <select id="findAll" resultType="com.atguigu.common.entity.Department">
+        select id, department_name, db_name from department
+    </select>
+
+</mapper>

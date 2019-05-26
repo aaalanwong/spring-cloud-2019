@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="micro-common" />
+        <module name="micro-consumer" />
+        <module name="micro-consumer-feign" />
+        <module name="micro-consumer-hystrix-dashboard" />
+        <module name="micro-eureka" />
+        <module name="micro-eureka-7002" />
+        <module name="micro-eureka-7003" />
+        <module name="micro-provider" />
+        <module name="micro-provider-8002" />
+        <module name="micro-provider-8003" />
+        <module name="micro-provider-hystrix" />
+        <module name="micro-provider-zuul-6001" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo" target="1.8" />
+      <module name="micro-common" target="1.8" />
+      <module name="micro-zuul-6001" target="1.8" />
+      <module name="microcommon" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

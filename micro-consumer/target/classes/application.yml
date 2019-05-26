@@ -1,0 +1,8 @@
+server:
+  port: 80
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://aaalanwong-7001.com:7001/eureka, http://aaalanwong-7002.com:7002/eureka, http://aaalanwong-7003.com:7003/eureka

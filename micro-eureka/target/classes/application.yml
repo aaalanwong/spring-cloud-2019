@@ -1,0 +1,53 @@
+server:
+  port: 7001
+
+eureka:
+  instance:
+    hostname: aaalanwong-7001.com
+
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://aaalanwong-7002.com:7002/eureka, http://aaalanwong-7003.com:7003/eureka
+spring:
+  application:
+    name: eureka-server
+  profiles: eureka7001
+
+---
+server:
+  port: 7002
+
+eureka:
+  instance:
+    hostname: aaalanwong-7002.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://aaalanwong-7001.com:7001/eureka, http://aaalanwong-7003.com:7003/eureka
+spring:
+  application:
+    name: eureka-server
+  profiles: eureka7002
+
+---
+server:
+  port: 7003
+
+eureka:
+  instance:
+    hostname: aaalanwong-7003.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://aaalanwong-7001.com:7001/eureka, http://aaalanwong-7002.com:7002/eureka
+spring:
+  application:
+    name: eureka-server
+  profiles: eureka7003
+
+
+
